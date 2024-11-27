@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "main#home"
 
-  post "login", to: "auth#login"
+  get "/auth/cognito", to: "sessions#new"
+  get "/auth/:provider/callback", to: "sessions#create"
+  get "/auth/failure", to: "sessions#failure"
 end

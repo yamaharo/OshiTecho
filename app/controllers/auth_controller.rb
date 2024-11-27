@@ -28,7 +28,7 @@ class AuthController < ApplicationController
 
     begin
       resp = client.initiate_auth({
-        client_id: "7i6uh9866u29rli9i3h0thk9gv", # アプリクライアントID
+        client_id: Env["COGNITO_CLIENT_ID"], # アプリクライアントID
         auth_flow: "USER_PASSWORD_AUTH",
         auth_parameters: {
           "USERNAME" => params[:username],

@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   private
 
   def decode_jwt(token)
-    jwks_url = "https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_bH1AFOp4L/.well-known/jwks.json"
+    jwks_url = "https://cognito-idp.#{ENV["COGNITO_USER_POOL_ID"]}.amazonaws.com/ap-northeast-1_bH1AFOp4L/.well-known/jwks.json"
     jwks_raw = Net::HTTP.get(URI(jwks_url))
     jwks = JSON.parse(jwks_raw)
 
