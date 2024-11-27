@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  host: oshitecho-db.cbkio64uouky.ap-northeast-1.rds.amazonaws.com
+  database: OshiTecho
+  username: postgres
+  password: OshiTecho
+
+test:
+  <<: *default
+  host: oshitecho-db.cbkio64uouky.ap-northeast-1.rds.amazonaws.com
+  database: OshiTecho_test
+  username: postgres
+  password: OshiTecho
+
+production:
+  <<: *default
+  database: OshiTeCho
+  username: postgres
+  password: OshiTecho
+  host: oshitecho-db.cbkio64uouky.ap-northeast-1.rds.amazonaws.com
