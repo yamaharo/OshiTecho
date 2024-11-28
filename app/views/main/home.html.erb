@@ -1,9 +1,10 @@
 <%= link_to 'ログイン', '/auth/cognito' %>
+<p>ようこそ <%= @current_user.user_id%></p>
 <h1>Main#home</h1>
 <p>Find me in app/views/main/home.html.erb</p>
 <h1>Hello, World!</h1>
 <% @access_categories.each do |access|%>
-<p><%= access.Access_ID %></p>
-<p><%= access.Name %></p>
+<p><%= access.access_id %></p>
+<p><%= access.name %></p>
 </br>
 <%end%>
