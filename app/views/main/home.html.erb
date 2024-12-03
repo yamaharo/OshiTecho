@@ -1,10 +1,26 @@
-<%= link_to 'ログイン', '/auth/cognito' %>
-<p>ようこそ <%= @current_user.user_id%></p>
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
-<h1>Hello, World!</h1>
-<% @access_categories.each do |access|%>
-<p><%= access.access_id %></p>
-<p><%= access.name %></p>
-</br>
-<%end%>
+<div class="container">
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+        <div class="background">
+            <img src="https://www.pakutaso.com/20241100333post-43440.html">
+        </div>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="row">
+        <div id="calendar"></div>
+        <h1>Hello, World!</h1>
+        <% @access_categories.each do |access|%>
+        <p><%= access.access_id %></p>
+        <p><%= access.name %></p>
+        </br>
+        <%end%>
+    </div>
+</div>

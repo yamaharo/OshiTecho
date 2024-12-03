@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= Profiel.find_by(user_id: session[:user_id].to_s) if session[:user_id]
+    # @current_user_name ||= Profiel.find(session[:user_id].to_s).name
   end
 
   def logged_in?
