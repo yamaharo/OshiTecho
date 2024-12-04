@@ -1,0 +1,2 @@
+class EventRemark < ApplicationRecord
+end

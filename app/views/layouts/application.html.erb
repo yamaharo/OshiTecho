@@ -35,16 +35,38 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo"><i class="material-icons">crop_rotate</i>Logo</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="*****.html"><i class="material-icons left">perm_data_setting</i>管理</a></li>
+          <li><a href="master/index"><i class="material-icons left">perm_data_setting</i>管理</a></li>
           <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= current_user %><i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= @current_user_name %><i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </div>
     </nav>
     <%= yield %>
   </body>
 
-  <footer>
-    ©.Cop 2024
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2024 Copyright OshiTecho制作委員会
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
   </footer>
 </html>

@@ -21,6 +21,7 @@ class AuthController < ApplicationController
     # セッションにユーザーIDを保存
     session[:user_id] = @current_user.user_id
     Rails.logger.debug("session :user_id: #{session[:user_id]}")
+    @current_user_name = @current_user.name
 
     # ログイン後のリダイレクト
     redirect_to root_path, notice: "ログインしました。"

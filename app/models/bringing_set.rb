@@ -1,0 +1,2 @@
+class BringingSet < ApplicationRecord
+end

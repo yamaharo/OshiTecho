@@ -1,0 +1,2 @@
+class Bringing < ApplicationRecord
+end

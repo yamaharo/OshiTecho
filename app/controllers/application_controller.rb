@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
       redirect_url = "#{ENV["COGNITO_DOMAIN"]}/oauth2/authorize?response_type=code&client_id=#{ENV["COGNITO_CLIENT_ID"]}&redirect_uri=#{cognito_redirect_uri}&language=ja"
       Rails.logger.debug("Redirecting to Cognito: #{redirect_url}")
       redirect_to redirect_url, allow_other_host: true
+    else
+      @current_user_name = Profiel.find(session[:user_id].to_s).name
     end
   end
 
@@ -23,7 +25,6 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= Profiel.find_by(user_id: session[:user_id].to_s) if session[:user_id]
-    # @current_user_name ||= Profiel.find(session[:user_id].to_s).name
   end
 
   def logged_in?

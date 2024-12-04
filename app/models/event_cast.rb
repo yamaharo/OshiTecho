@@ -1,0 +1,2 @@
+class EventCast < ApplicationRecord
+end

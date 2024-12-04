@@ -1,0 +1,2 @@
+class AccessCost < ApplicationRecord
+end
