@@ -1,0 +1,46 @@
+<div class="right-align">
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <%= form_with(model: new_model, url: "/master/new", local: false) do |form| %>
+      <div class="modal-content">
+        <div>
+          <%= form.label :title %>
+          <%= form.text_field :title %>
+        </div>
+        <div>
+          <%= form.label :content %>
+          <%= form.text_area :content %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= form.submit "登録" %>
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">キャンセル</a>
+      </div>
+    <% end %>
+  </div>
+</div>
+<table class="striped highlight responsive-table">
+  <thead>
+    <tr>
+      <% columns.each do |column| %>
+        <% unless @hidden_columns.include?(column) %>
+          <th><%= column.humanize %></th>
+        <% end %>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% table.each do |record| %>  <!-- インスタンス変数ではなく、引数として渡されたusersを使用 -->
+      <tr>
+        <% columns.each do |column| %>
+          <% unless @hidden_columns.include?(column) %>
+            <td><%= record[column] %></td>
+            <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

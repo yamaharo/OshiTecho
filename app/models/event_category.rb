@@ -3,7 +3,7 @@ class EventCategory < ApplicationRecord
 
   has_many :event
 
-  validate :event_category_id, presence: true
-  validate :name, presence: true
-  validate :sort, presence: true
+  validates :event_category_id, presence: true
+  validates :name, presence: true
+  validates :sort, presence: true
 end

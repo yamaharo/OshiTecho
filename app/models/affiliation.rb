@@ -1,9 +1,9 @@
 class Affiliation < ApplicationRecord
   self.table_name = "Affiliations"
 
-  belong_to :office
-  belong_to :oshi
+  belongs_to :office
+  belongs_to :oshi
 
-  validate :office_id, presence: true
-  validate :oshi_id, presence: true
+  validates :office_id, presence: true
+  validates :oshi_id, presence: true
 end

@@ -4,7 +4,7 @@ class Memory < ApplicationRecord
   has_many :event
   has_many :profiel
 
-  validate :memory_id, presence: true
-  validate :event_id, presence: true
-  validate :user_id, presence: true
+  validates :memory_id, presence: true
+  validates :event_id, presence: true
+  validates :user_id, presence: true
 end

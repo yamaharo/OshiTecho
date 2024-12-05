@@ -1,8 +1,8 @@
 class AccessCost < ApplicationRecord
   self.table_name = "Access_Costs"
 
-  belong_to :prefecture
-  belong_to :access_category
+  belongs_to :prefecture
+  belongs_to :access_category
 
   validates :prefecture_id_from, presence: true
   validates :prefecture_id_to, presence: true

@@ -3,6 +3,6 @@ class Music < ApplicationRecord
 
   has_many :set_list
 
-  validate :music_id, presence: true
-  validate :name, presence: true
+  validates :music_id, presence: true
+  validates :name, presence: true
 end

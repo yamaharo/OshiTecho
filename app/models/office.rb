@@ -4,7 +4,7 @@ class Office < ApplicationRecord
   has_many :affilation
   has_many :oshi
 
-  validate :office_id, presence: true
-  validate :name, presence: true
-  validate :sort, presence: true
+  validates :office_id, presence: true
+  validates :name, presence: true
+  validates :sort, presence: true
 end

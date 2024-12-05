@@ -6,6 +6,8 @@ export default class extends Controller {
     console.log("master start!!!");
     var tabs = document.querySelectorAll('.tabs');
     M.Tabs.init(tabs);
+    var modals = document.querySelectorAll('.modal');
+    M.Modal.init(modals);
     console.log("master success!!!");
   }
 }

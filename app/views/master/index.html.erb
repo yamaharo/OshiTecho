@@ -4,32 +4,21 @@
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s3"><a href="#access_category">交通手段</a></li>
-        <li class="tab col s3"><a href="#test2">Tab 2</a></li>
+        <li class="tab col s3"><a href="#affiliation">Tab 2</a></li>
         <li class="tab col s3"><a href="#test3">Tab 3</a></li>
         <li class="tab col s3"><a href="#test4">Tab 4</a></li>
       </ul>
     </div>
     <div id="access_category" class="col s12">
-      <table class="striped highlight responsive-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>交通手段名</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% if !@access_categories.blank? %>
-            <% @access_categories.each do |access_category| %>
-                <tr>
-                <td><%= access_category.access_id%></td>
-                <td><%= access_category.name%></td>
-                </tr>
-                <% end %>
-            <% end %>
-        </tbody>
-      </table>
+      <%= render partial: 'master/table', locals: { table: @access_categories,
+                                                    columns: @access_categories_columns,
+                                                    new_model: @access_categories_new } %>
     </div>
-    <div id="test2" class="col s12">Content 2</div>
+    <div id="affiliation" class="col s12">
+      <%= render partial: 'master/table', locals: { table: @affiliations,
+                                                    columns: @affiliations_columns,
+                                                    new_model: @affiliations_new } %>
+    </div>
     <div id="test3" class="col s12">Content 3</div>
     <div id="test4" class="col s12">Content 4</div>
   </div>

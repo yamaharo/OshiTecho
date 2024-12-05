@@ -1,7 +1,9 @@
 class SetList < ApplicationRecord
   self.table_name = "Set_Lists"
 
-  validate :set_list_id, presence: true
-  validate :music_id, presence: true
-  validate :sort, presence: true
+  belongs_to :music
+
+  validates :set_list_id, presence: true
+  validates :music_id, presence: true
+  validates :sort, presence: true
 end

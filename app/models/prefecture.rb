@@ -5,6 +5,6 @@ class Prefecture < ApplicationRecord
   has_many :event
   has_many :profiel
 
-  validate :prefecture_id, presence: true
-  validate :name, presence: true
+  validates :prefecture_id, presence: true
+  validates :name, presence: true
 end
