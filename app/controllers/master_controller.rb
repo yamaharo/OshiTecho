@@ -1,6 +1,6 @@
 class MasterController < ApplicationController
   def index
-    @
+    @access_categories=AccessCategory.all
   end
 
   def show
@@ -9,7 +9,7 @@ class MasterController < ApplicationController
   def form
   end
 
-  def create
+  def insert
   end
 
   def update

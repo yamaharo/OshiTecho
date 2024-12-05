@@ -1,29 +1,36 @@
-<h3>マスタ管理</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Item Name</th>
-            <th>Item Price</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-        <td>Alvin</td>
-        <td>Eclair</td>
-        <td>$0.87</td>
-        </tr>
-        <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-        </tr>
-        <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
-        </tr>
-    </tbody>
-</table>    
+<div class="container" data-controller="master">
+  <h5>マスタ管理</h5>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#access_category">交通手段</a></li>
+        <li class="tab col s3"><a href="#test2">Tab 2</a></li>
+        <li class="tab col s3"><a href="#test3">Tab 3</a></li>
+        <li class="tab col s3"><a href="#test4">Tab 4</a></li>
+      </ul>
+    </div>
+    <div id="access_category" class="col s12">
+      <table class="striped highlight responsive-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>交通手段名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if !@access_categories.blank? %>
+            <% @access_categories.each do |access_category| %>
+                <tr>
+                <td><%= access_category.access_id%></td>
+                <td><%= access_category.name%></td>
+                </tr>
+                <% end %>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div id="test2" class="col s12">Content 2</div>
+    <div id="test3" class="col s12">Content 3</div>
+    <div id="test4" class="col s12">Content 4</div>
+  </div>
+</div>
