@@ -4,9 +4,9 @@
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s3"><a href="#access_category">交通手段</a></li>
-        <li class="tab col s3"><a href="#affiliation">Tab 2</a></li>
-        <li class="tab col s3"><a href="#test3">Tab 3</a></li>
-        <li class="tab col s3"><a href="#test4">Tab 4</a></li>
+        <li class="tab col s3"><a href="#event_category">イベントカテゴリ</a></li>
+        <li class="tab col s3"><a href="#music">ミュージック</a></li>
+        <li class="tab col s3"><a href="#job">職業</a></li>
       </ul>
     </div>
     <div id="access_category" class="col s12">
@@ -14,12 +14,24 @@
                                                     columns: @access_categories_columns,
                                                     new_model: @access_categories_new } %>
     </div>
-    <div id="affiliation" class="col s12">
-      <%= render partial: 'master/table', locals: { table: @affiliations,
-                                                    columns: @affiliations_columns,
-                                                    new_model: @affiliations_new } %>
+    <div id="event_category" class="col s12">
+      <%= render partial: 'master/table', locals: { table: @event_categories,
+                                                    columns: @event_categories_columns,
+                                                    new_model: @event_categories_new } %>
     </div>
-    <div id="test3" class="col s12">Content 3</div>
-    <div id="test4" class="col s12">Content 4</div>
+    <div id="music" class="col s12">
+      <%= render partial: 'master/table', locals: { table: @musics,
+                                                    columns: @musics_columns,
+                                                    new_model: @musics_new } %>
+    </div>
+    <div id="job" class="col s12">
+      <%= render partial: 'master/table', locals: { table: @jobs,
+                                                    columns: @jobs_columns,
+                                                    new_model: @jobs_new } %>
+    </div>
   </div>
 </div>
+
+<%= turbo_frame_tag "alerts", data: { turbo: false } do %>
+  <div></div>
+<% end %>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get "master/index"
   get "master/show"
   get "master/form"
-
+  post "master/new"
   resources :master
   # get "auth/login"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

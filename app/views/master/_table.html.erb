@@ -4,7 +4,7 @@
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal modal-fixed-footer">
-    <%= form_with(model: new_model, url: "/master/new", local: false) do |form| %>
+    <%= form_with(model: new_model, url: "/master/new", remote: true) do |form| %>
       <div class="modal-content">
         <div>
           <%= form.label :title %>
