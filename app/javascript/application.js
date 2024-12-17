@@ -5,6 +5,6 @@ import "controllers"
 document.addEventListener("turbo:load", () => {
   console.log("application.js start!!!");
   var dropElems = document.querySelectorAll('.dropdown-trigger');
-  var dropdownInstances = M.Dropdown.init(dropElems);
+  M.Dropdown.init(dropElems);
   console.log("application.js success!!!");
 });

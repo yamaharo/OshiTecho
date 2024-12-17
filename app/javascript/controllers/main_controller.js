@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import { Calendar } from '@fullcalendar/core'
+import { Calendar } from '@fullcalendar/core/locales/ja'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 // Connects to data-controller="main"
@@ -9,6 +10,7 @@ export default class extends Controller {
     const calendarEl = document.getElementById('calendar')
     const calendar = new Calendar(calendarEl, {
       plugins: [dayGridPlugin],
+      locale: "jp",
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',

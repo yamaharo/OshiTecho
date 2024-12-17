@@ -1,7 +1,6 @@
 class Oshi < ApplicationRecord
   self.table_name = "Oshis"
 
-  belongs_to :office
   belongs_to :job
 
   has_many :affilation
